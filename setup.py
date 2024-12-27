@@ -9,7 +9,7 @@ with open("Readme.md", 'r', encoding='utf-8') as f:
 __version__ = "0.0.0"
 REPO_NAME = "Car-Parking-Counter"
 AUTHOR_USER_NAME = "ishumann"
-SRC_REPO = "CarParkingCounter"
+SRC_REPO = "carParkingCounter"
 AUTHOR_EMAIL = "mann.agrawal17@gmail.com"
 
 setuptools.setup(
