@@ -17,10 +17,11 @@ def mouseClick(events, x, y, flags, params):
         posList.append((x, y))
 
     if events == cv2.EVENT_RBUTTONDOWN:
-        for i,pos in enumerate(posList):
-            x1, y1  = pos
-        if x1 < x < x1 + box_width and y1 < y < y1 + box_height:
-            posList.pop(i)
+        for i, pos in enumerate(posList):
+            x1, y1 = pos
+            if (x1 < x < (x1 + box_width)) and (y1 < y < (y1 + box_height)):
+                del posList[i]
+                break
 
     with open("carparkpos", 'wb') as f:
         pickle.dump(posList, f)
