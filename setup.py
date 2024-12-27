@@ -3,7 +3,6 @@ import setuptools
 
 with open("Readme.md", 'r', encoding='utf-8') as f:
     long_description = f.read() 
-    
 
 
 __version__ = "0.0.0"
@@ -28,4 +27,3 @@ setuptools.setup(
     packages = setuptools.find_packages(where='src')
     
 )
-

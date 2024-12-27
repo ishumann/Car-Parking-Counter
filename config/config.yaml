@@ -13,6 +13,6 @@ data_ingestion:
 
 
 
-data_source:
-  video_source: /Image_Video/video.mp4
-  image_source: /Image_Video/image.jpg
+# data_source:
+#   video_source: /Image_Video/video.mp4
+#   image_source: /Image_Video/image.jpg
