@@ -1,9 +1,9 @@
 from carParkingCounter.pipeline.data_ingestion_stage import (
     DataIngestionTrainingPipeline,
 )
-# from carParkingCounter.pipeline.stage_02_data_validation import (
-#     DataValidationTrainingPipeline,
-# )
+from carParkingCounter.pipeline.data_validation_stage import (
+    DataValidationTrainingPipeline,
+)
 # from carParkingCounter.pipeline.stage_03_data_transformation import (
 #     DataTransformationTrainingPipeline,
 # )
@@ -13,13 +13,25 @@ from carParkingCounter.pipeline.data_ingestion_stage import (
 # )
 from carParkingCounter import logger
 
-STAGE_NAME = "Date Ingestion"
+# STAGE_NAME = "Date Ingestion"
 
+
+# try:
+#     logger.info(f">>>>>>>>> Stage {STAGE_NAME} started <<<<<<<<<<<<")
+#     data_ingestion = DataIngestionTrainingPipeline()
+#     data_ingestion.main()
+#     logger.info(f">>>>>>>>> Stage {STAGE_NAME} completed <<<<<<<<<<<<")
+# except Exception as e:
+#     logger.exception(e)
+#     raise e
+
+
+STAGE_NAME = "Date Validation"
 
 try:
     logger.info(f">>>>>>>>> Stage {STAGE_NAME} started <<<<<<<<<<<<")
-    data_ingestion = DataIngestionTrainingPipeline()
-    data_ingestion.main()
+    data_validation = DataValidationTrainingPipeline()
+    data_validation.main()
     logger.info(f">>>>>>>>> Stage {STAGE_NAME} completed <<<<<<<<<<<<")
 except Exception as e:
     logger.exception(e)
