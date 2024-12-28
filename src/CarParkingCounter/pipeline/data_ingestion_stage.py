@@ -9,6 +9,7 @@ class DataIngestionTrainingPipeline:
     def __init__(self):
         pass
 
+
     def main(self):
         try:
             config = ConfigurationManager()
