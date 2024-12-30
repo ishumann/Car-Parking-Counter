@@ -15,3 +15,12 @@ class DataValidationConfig:
     root_dir: Path
     STATUS_FILE: str
     ALL_REQUIRED_FILES: list
+
+
+@dataclass(frozen=True)
+class PosFinderConfig:
+    image_dir: Path
+    load_pickle_dir: Path
+    save_pickle_dir: Path
+
+
