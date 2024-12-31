@@ -1,6 +1,11 @@
 from carParkingCounter.constants import *
 from carParkingCounter.utils.common import read_yaml, create_directories
-from carParkingCounter.entity import DataIngestionConfig, DataValidationConfig
+from carParkingCounter.entity import (
+    DataIngestionConfig,
+    DataValidationConfig,
+    PosFinderConfig,
+)
+
 # PrepareBaseModelConfig, TrainingConfig, EvaluationConfig)
 import os 
 class ConfigurationManager:
@@ -35,3 +40,14 @@ class ConfigurationManager:
         )
 
         return data_validation_config
+
+    def get_posfinder_config(self) -> PosFinderConfig:
+        config = self.config.data_validation
+        create_directories([config.root_dir])
+
+        posfinder_config = PosFinderConfig(
+            image_dir=config.root_dir,
+            pickle_dir=config.STATUS_FILE,
+        )
+
+        return posfinder_config

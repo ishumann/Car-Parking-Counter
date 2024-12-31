@@ -16,7 +16,8 @@ data_validation:
 
 
 posfinder:
-  root_dir: artifacts/data_ingestion
+  image_dir: artifacts/data_ingestion/image.png
+  pickle_dir: artifacts/posfinder
 
 
 

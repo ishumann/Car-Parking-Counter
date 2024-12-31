@@ -20,7 +20,6 @@ class DataValidationConfig:
 @dataclass(frozen=True)
 class PosFinderConfig:
     image_dir: Path
-    load_pickle_dir: Path
-    save_pickle_dir: Path
+    pickle_dir: Path
 
 
