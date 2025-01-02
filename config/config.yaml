@@ -22,6 +22,14 @@ posfinder:
 
 
 
+parking_counter:
+  root_dir: artifacts/parking_counter
+  pickle_dir: artifacts/posfinder/carparkpos
+  video_dir: artifacts/data_ingestion/data/
+  video_write_dir: artifacts/posfinder/output
+
+
+
 # data_source:
 #   video_source: /Image_Video/video.mp4
 #   image_source: /Image_Video/image.jpg

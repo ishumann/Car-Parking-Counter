@@ -7,10 +7,10 @@ from carParkingCounter.pipeline.data_validation_stage import (
 from carParkingCounter.pipeline.posfinder import (
     PosFinderPipeline
 )
-# from carParkingCounter.pipeline.stage_04_model_pipeline import ModelTrainingPipeline
-# from carParkingCounter.pipeline.stage_05_model_evaluation_pipeline import (
-#     ModelEvaluationPipeline,
-# )
+from carParkingCounter.pipeline.parking_counter import (
+    ParkingCounterPipeline
+)
+
 from carParkingCounter import logger
 
 # STAGE_NAME = "Date Ingestion"
@@ -39,11 +39,22 @@ from carParkingCounter import logger
 
 
 
-STAGE_NAME = "PosFinder"
+# STAGE_NAME = "PosFinder"
+
+# try:
+#     logger.info(f">>>>>>>>> Stage {STAGE_NAME} started <<<<<<<<<<<<")
+#     posfinder = PosFinderPipeline()
+#     posfinder.main()
+#     logger.info(f">>>>>>>>> Stage {STAGE_NAME} completed <<<<<<<<<<<<")
+# except Exception as e:
+#     logger.exception(e)
+#     raise e
+
+STAGE_NAME = "Parking Counter Stage"
 
 try:
     logger.info(f">>>>>>>>> Stage {STAGE_NAME} started <<<<<<<<<<<<")
-    posfinder = PosFinderPipeline()
+    posfinder = ParkingCounterPipeline()
     posfinder.main()
     logger.info(f">>>>>>>>> Stage {STAGE_NAME} completed <<<<<<<<<<<<")
 except Exception as e:
