@@ -42,12 +42,15 @@ class ConfigurationManager:
         return data_validation_config
 
     def get_posfinder_config(self) -> PosFinderConfig:
-        config = self.config.data_validation
+        config = self.config.posfinder
+
         create_directories([config.root_dir])
 
         posfinder_config = PosFinderConfig(
-            image_dir=config.root_dir,
-            pickle_dir=config.STATUS_FILE,
+            image_dir=config.image_dir,
+            pickle_dir=config.pickle_dir,
+            box_width=self.params.box_width,
+            box_height=self.params.box_height,
         )
 
         return posfinder_config

@@ -125,7 +125,7 @@ def load_json(path: Path) -> ConfigBox:
 
 
 @ensure_annotations
-def load_pickle(path: Path) -> ConfigBox:
+def load_pickle(path: Path):
     """load pickle files data
 
 
@@ -145,7 +145,7 @@ def load_pickle(path: Path) -> ConfigBox:
 
             content = pickle.load(f)
 
-            return ConfigBox(content)
+            return content
 
     except BoxValueError:
 

@@ -1,7 +1,8 @@
 from carParkingCounter import logger
 from carParkingCounter.config.configuration import ConfigurationManager
 from carParkingCounter.components.posfinder import PosFinder
-
+import cv2
+from box import ConfigBox
 
 class PosFinderPipeline:
     def __init__(self):
@@ -19,7 +20,10 @@ class PosFinderPipeline:
                 cv2.rectangle(
                     image,
                     (pos[0], pos[1]),
-                    (pos[0] + box_width, pos[1] + box_height),
+                    (
+                        pos[0] + posfinder_config.box_width,
+                        pos[1] + posfinder_config.box_height,
+                    ),
                     (0, 255, 0),
                     1,
                 )

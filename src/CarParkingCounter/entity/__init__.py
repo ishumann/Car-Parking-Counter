@@ -21,5 +21,7 @@ class DataValidationConfig:
 class PosFinderConfig:
     image_dir: Path
     pickle_dir: Path
+    box_height: int
+    box_width: int
 
 

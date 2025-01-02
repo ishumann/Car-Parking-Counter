@@ -16,8 +16,9 @@ data_validation:
 
 
 posfinder:
-  image_dir: artifacts/data_ingestion/image.png
-  pickle_dir: artifacts/posfinder
+  root_dir: artifacts/posfinder
+  image_dir: artifacts/data_ingestion/data/image.png
+  pickle_dir: artifacts/posfinder/carparkpos
 
 
 
