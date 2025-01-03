@@ -38,7 +38,6 @@ from carParkingCounter import logger
 #     raise e
 
 
-
 # STAGE_NAME = "PosFinder"
 
 # try:
@@ -54,8 +53,8 @@ STAGE_NAME = "Parking Counter Stage"
 
 try:
     logger.info(f">>>>>>>>> Stage {STAGE_NAME} started <<<<<<<<<<<<")
-    posfinder = ParkingCounterPipeline()
-    posfinder.main()
+    parking_counter = ParkingCounterPipeline()
+    parking_counter.main()
     logger.info(f">>>>>>>>> Stage {STAGE_NAME} completed <<<<<<<<<<<<")
 except Exception as e:
     logger.exception(e)

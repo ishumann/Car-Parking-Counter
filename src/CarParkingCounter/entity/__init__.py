@@ -6,7 +6,7 @@ from pathlib import Path
 class DataIngestionConfig:
     root_dir: Path
     source_URL: str
-    local_data_file: Paths
+    local_data_file: Path
     unzip_dir: Path
 
 
@@ -25,12 +25,11 @@ class PosFinderConfig:
     box_width: int
 
 
-
 @dataclass(frozen=True)
 class ParkingCounterConfig:
     root_dir: Path
     pickle_dir: Path
     video_dir: Path
     video_write_dir: Path
-
-
+    box_height: int
+    box_width: int
