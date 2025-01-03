@@ -107,8 +107,9 @@ class ParkingCounter:
 
                 cv2.imshow("video", frame)
                 # Write the processed frame to the output video
-                processed_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-                out.write(cv2.cvtColor(processed_frame, cv2.COLOR_GRAY2BGR))
+                # processed_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+
+                out.write(frame)
                 if cv2.waitKey(1) & 0xFF == ord("q"):
                     break
             else:

@@ -20,11 +20,11 @@ while cap.isOpened():
         break
 
     # Process the frame (example: convert to grayscale)
-    processed_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    # processed_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
     # Write the processed frame to the output video
-    out.write(cv2.cvtColor(processed_frame, cv2.COLOR_GRAY2BGR))
-
+    out.write(frame)
+    # out.write(cv2.cvtColor(frame, cv2.COLOR_RGB2BGR))
 # Release everything if job is finished
 cap.release()
 out.release()
