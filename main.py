@@ -13,41 +13,41 @@ from carParkingCounter.pipeline.parking_counter import (
 
 from carParkingCounter import logger
 
-# STAGE_NAME = "Date Ingestion"
+STAGE_NAME = "Date Ingestion"
 
 
-# try:
-#     logger.info(f">>>>>>>>> Stage {STAGE_NAME} started <<<<<<<<<<<<")
-#     data_ingestion = DataIngestionTrainingPipeline()
-#     data_ingestion.main()
-#     logger.info(f">>>>>>>>> Stage {STAGE_NAME} completed <<<<<<<<<<<<")
-# except Exception as e:
-#     logger.exception(e)
-#     raise e
+try:
+    logger.info(f">>>>>>>>> Stage {STAGE_NAME} started <<<<<<<<<<<<")
+    data_ingestion = DataIngestionTrainingPipeline()
+    data_ingestion.main()
+    logger.info(f">>>>>>>>> Stage {STAGE_NAME} completed <<<<<<<<<<<<")
+except Exception as e:
+    logger.exception(e)
+    raise e
 
 
-# STAGE_NAME = "Date Validation"
+STAGE_NAME = "Date Validation"
 
-# try:
-#     logger.info(f">>>>>>>>> Stage {STAGE_NAME} started <<<<<<<<<<<<")
-#     data_validation = DataValidationTrainingPipeline()
-#     data_validation.main()
-#     logger.info(f">>>>>>>>> Stage {STAGE_NAME} completed <<<<<<<<<<<<")
-# except Exception as e:
-#     logger.exception(e)
-#     raise e
+try:
+    logger.info(f">>>>>>>>> Stage {STAGE_NAME} started <<<<<<<<<<<<")
+    data_validation = DataValidationTrainingPipeline()
+    data_validation.main()
+    logger.info(f">>>>>>>>> Stage {STAGE_NAME} completed <<<<<<<<<<<<")
+except Exception as e:
+    logger.exception(e)
+    raise e
 
 
-# STAGE_NAME = "PosFinder"
+STAGE_NAME = "PosFinder"
 
-# try:
-#     logger.info(f">>>>>>>>> Stage {STAGE_NAME} started <<<<<<<<<<<<")
-#     posfinder = PosFinderPipeline()
-#     posfinder.main()
-#     logger.info(f">>>>>>>>> Stage {STAGE_NAME} completed <<<<<<<<<<<<")
-# except Exception as e:
-#     logger.exception(e)
-#     raise e
+try:
+    logger.info(f">>>>>>>>> Stage {STAGE_NAME} started <<<<<<<<<<<<")
+    posfinder = PosFinderPipeline()
+    posfinder.main()
+    logger.info(f">>>>>>>>> Stage {STAGE_NAME} completed <<<<<<<<<<<<")
+except Exception as e:
+    logger.exception(e)
+    raise e
 
 STAGE_NAME = "Parking Counter Stage"
 
