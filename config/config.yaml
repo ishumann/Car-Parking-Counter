@@ -26,7 +26,7 @@ parking_counter:
   root_dir: artifacts/parking_counter
   pickle_dir: artifacts/posfinder/carparkpos
   video_dir: artifacts/data_ingestion/data/video.mp4
-  video_write_dir: artifacts/posfinder/output
+  video_write_dir: artifacts/parking_counter/output.mp4
 
 
 
