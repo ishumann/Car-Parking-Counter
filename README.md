@@ -11,3 +11,7 @@
 6. update the pipeline
 7. update the main.py
 8. update the app.py
+
+# Output
+
+![](./Image_Video/python_o2y876zD0J.gif)
